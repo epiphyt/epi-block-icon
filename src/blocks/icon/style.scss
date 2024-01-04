@@ -1,0 +1,27 @@
+.wp-block-epi-icon {
+	--epiphyt--block-icon--background-padding: 1rem;
+	line-height: 0;
+	
+	svg {
+		height: 100%;
+		width: 100%;
+	}
+	
+	> .link,
+	> .no-link {
+		align-items: center;
+		display: inline-flex;
+		justify-content: center;
+	}
+	
+	&.has-background {
+		> .link,
+		> .no-link {
+			padding: var(--epiphyt--block-icon--background-padding);
+		}
+	}
+	
+	&.is-style-rounded {
+		border-radius: 9999px;
+	}
+}

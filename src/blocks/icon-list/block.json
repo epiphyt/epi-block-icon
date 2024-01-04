@@ -1,0 +1,36 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "epi/icon-list",
+	"title": "Icon list",
+	"category": "design",
+	"description": "An enhanced icon list",
+	"keywords": [ "symbol", "list", "pictogram" ],
+	"version": "1.0.0",
+	"textdomain": "epi-block-icon",
+	"supports": {
+		"align": true,
+		"__experimentalExposeControlsToChildren": true,
+		"html": false,
+		"layout": {
+			"allowSwitching": false,
+			"allowInheriting": false,
+			"default": {
+				"type":"flex"
+			}
+		}
+	},
+	"example": {
+		"innerBlocks": [
+			{
+				"attributes": {
+					"icon": "cake"
+				},
+				"name": "epi/icon"
+			}
+		]
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": [ "file:./style.css" ]
+}

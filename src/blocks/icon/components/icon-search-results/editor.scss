@@ -1,0 +1,10 @@
+.epi-block-icon__selection-popover > .components-popover__content {
+	max-height: 400px !important;
+	max-width: 100%;
+	width: 100%;
+	
+	@media (min-width: 782px) {
+		max-width: 350px;
+		width: 350px;
+	}
+}

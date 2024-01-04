@@ -1,0 +1,26 @@
+{
+	"name": "epi-block-icon",
+	"scripts": {
+		"start": "wp-scripts start",
+		"build": "wp-scripts build",
+		"i18n": "DOMAIN=epi-block-icon; wp i18n make-pot . ./languages/${DOMAIN}.pot",
+		"po2json": "DOMAIN=epi-block-icon; HANDLE=epi-icon-editor-script; LANGS=( de_DE de_DE_formal ); for LANG in ${LANGS[@]}; do po2json languages/${DOMAIN}-${LANG}.po languages/${DOMAIN}-${LANG}-${HANDLE}.json -p -f jed1.x && sed -i.bak s/${LANG/_formal/@formal}/${LANG}/g languages/${DOMAIN}-${LANG}-${HANDLE}.json; done && rm languages/*.bak"
+	},
+	"author": "Epiphyt",
+	"license": "GPL-2.0",
+	"devDependencies": {
+		"@wordpress/block-editor": "^12.16.0",
+		"@wordpress/blocks": "^12.25.0",
+		"@wordpress/components": "^25.14.0",
+		"@wordpress/element": "^5.25.0",
+		"@wordpress/i18n": "^4.48.0",
+		"@wordpress/icons": "^9.39.0",
+		"@wordpress/keycodes": "^3.48.0",
+		"@wordpress/prettier-config": "^3.5.0",
+		"@wordpress/scripts": "^26.19.0",
+		"@wordpress/url": "^3.49.0",
+		"po2json": "^0.4.5",
+		"prettier": "npm:wp-prettier@^3.0.3",
+		"react-inlinesvg": "^4.1.0"
+	}
+}

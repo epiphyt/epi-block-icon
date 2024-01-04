@@ -1,0 +1,54 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "epi/icon",
+	"title": "Icon",
+	"category": "design",
+	"parent": [ "epi/icon-list" ],
+	"description": "An enhanced icon block",
+	"keywords": [ "symbol" ],
+	"version": "1.0.0",
+	"textdomain": "epi-block-icon",
+	"attributes": {
+		"icon": {
+			"type": "string"
+		},
+		"linkTarget": {
+			"type": "string"
+		},
+		"rel": {
+			"type": "string"
+		},
+		"size": {
+			"default": "64px",
+			"type": "string"
+		},
+		"title": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		}
+	},
+	"supports": {
+		"align": false,
+		"html": false,
+		"color": {
+			"background": true,
+			"link": true,
+			"text": true
+		}
+	},
+	"example": {
+		"attributes": {
+			"icon": "cake"
+		}
+	},
+	"styles": [
+		{ "name": "default", "label": "Default", "isDefault": true },
+		{ "name": "rounded", "label": "Rounded" }
+	],
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": [ "file:./style-index.css" ]
+}

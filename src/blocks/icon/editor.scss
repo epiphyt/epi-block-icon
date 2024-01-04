@@ -1,0 +1,7 @@
+.wp-block-epi-icon {
+	--epiphyt--block-icon--background-padding: 1rem;
+	
+	&.is-style-rounded {
+		padding: var(--epiphyt--block-icon--background-padding);
+	}
+}

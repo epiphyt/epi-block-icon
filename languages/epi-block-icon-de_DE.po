@@ -1,0 +1,166 @@
+# Copyright (C) 2024 Epiphyt
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Block Icon 1.0.0-dev\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/epi-block-icon\n"
+"POT-Creation-Date: 2024-01-04T20:36:02+00:00\n"
+"PO-Revision-Date: 2024-01-04 21:38+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.4.2\n"
+"X-Domain: epi-block-icon\n"
+
+#. Plugin Name of the plugin
+msgid "Block Icon"
+msgstr "Block Icon"
+
+#. Description of the plugin
+msgid "An enhanced icon block."
+msgstr "Ein erweiterter Icon-Block."
+
+#. Author of the plugin
+msgid "Epiphyt"
+msgstr "Epiphyt"
+
+#. Author URI of the plugin
+msgid "https://epiph.yt/en/"
+msgstr "https://epiph.yt/"
+
+#: inc/class-admin.php:25 build/blocks/icon/index.js:286
+#: src/blocks/icon/components/icon-search-results/index.js:27
+#: build/blocks/icon/index.js:149
+msgid "Icons"
+msgstr "Icons"
+
+#: inc/class-admin.php:31
+msgid "Icon set"
+msgstr "Icon-Set"
+
+#: inc/class-admin.php:39
+msgid "Phosphor"
+msgstr "Phosphor"
+
+#: inc/class-admin.php:46
+msgid "Icon variant"
+msgstr "Icon-Variante"
+
+#: inc/class-admin.php:54
+msgid "Bold"
+msgstr "Fett"
+
+#: inc/class-admin.php:55
+msgid "Duotone"
+msgstr "Duotone"
+
+#: inc/class-admin.php:56
+msgid "Fill"
+msgstr "Gefüllt"
+
+#: inc/class-admin.php:57
+msgid "Light"
+msgstr "Leicht"
+
+#: inc/class-admin.php:58
+msgid "Regular"
+msgstr "Normal"
+
+#: inc/class-admin.php:59
+msgid "Thin"
+msgstr "Dünn"
+
+#: build/blocks/icon/index.js:351
+#: src/blocks/icon/components/icon-selection/index.js:26
+#: build/blocks/icon/index.js:195
+msgid "Search"
+msgstr "Suchen"
+
+#: build/blocks/icon/index.js:367
+#: src/blocks/icon/components/icon-selection/index.js:46
+#: build/blocks/icon/index.js:215
+msgid "Change icon"
+msgstr "Icon ändern"
+
+#: build/blocks/icon/index.js:462 src/blocks/icon/edit.js:30
+#: build/blocks/icon/index.js:264
+msgid "Mark as nofollow"
+msgstr "Als nofollow markieren"
+
+#: build/blocks/icon/index.js:530 src/blocks/icon/edit.js:96
+#: build/blocks/icon/index.js:330
+msgid "Unlink"
+msgstr "Link entfernen"
+
+#: build/blocks/icon/index.js:530 src/blocks/icon/edit.js:96
+#: build/blocks/icon/index.js:330
+msgid "Link"
+msgstr "Link"
+
+#: build/blocks/icon/index.js:540 src/blocks/icon/edit.js:111
+#: build/blocks/icon/index.js:345
+msgid ""
+"A title for accessibility purposes, e.g. if the icon acts as an action, link "
+"or similar."
+msgstr ""
+"Ein Titel für Barrierefreiheit, z. B. wenn das Icon als Aktion, Link oder "
+"Ähnliches benutzt wird."
+
+#: build/blocks/icon/index.js:541 src/blocks/icon/edit.js:112
+#: build/blocks/icon/index.js:346
+msgid "Title"
+msgstr "Titel"
+
+#: build/blocks/icon/index.js:547 src/blocks/icon/edit.js:117
+#: build/blocks/icon/index.js:351
+msgid "Size"
+msgstr "Größe"
+
+#: build/blocks/icon-list/block.json src/blocks/icon-list/block.json
+msgctxt "block title"
+msgid "Icon list"
+msgstr "Icon-Liste"
+
+#: build/blocks/icon-list/block.json src/blocks/icon-list/block.json
+msgctxt "block description"
+msgid "An enhanced icon list"
+msgstr "Eine erweiterte Icon-Liste"
+
+#: build/blocks/icon-list/block.json build/blocks/icon/block.json
+#: src/blocks/icon-list/block.json src/blocks/icon/block.json
+msgctxt "block keyword"
+msgid "symbol"
+msgstr "Symbol"
+
+#: build/blocks/icon-list/block.json src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "list"
+msgstr "Liste"
+
+#: build/blocks/icon-list/block.json src/blocks/icon-list/block.json
+msgctxt "block keyword"
+msgid "pictogram"
+msgstr "Piktogramm"
+
+#: build/blocks/icon/block.json src/blocks/icon/block.json
+msgctxt "block title"
+msgid "Icon"
+msgstr "Icon"
+
+#: build/blocks/icon/block.json src/blocks/icon/block.json
+msgctxt "block description"
+msgid "An enhanced icon block"
+msgstr "Ein erweiterter Icon-Block"
+
+#: build/blocks/icon/block.json src/blocks/icon/block.json
+msgctxt "block style label"
+msgid "Default"
+msgstr "Standard"
+
+#: build/blocks/icon/block.json src/blocks/icon/block.json
+msgctxt "block style label"
+msgid "Rounded"
+msgstr "Abgerundet"
