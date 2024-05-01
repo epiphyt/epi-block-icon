@@ -56,6 +56,7 @@ final class Block {
 		$attributes = \wp_parse_args(
 			$attributes,
 			[
+				'element' => 'div',
 				'icon' => '',
 				'linkTarget' => '',
 				'rel' => '',
@@ -67,7 +68,7 @@ final class Block {
 		$aria_attributes = ( ! empty( $attributes['title'] ) ? ' aria-label="' . \esc_attr( $attributes['title'] ) . '"' : ' aria-hidden="true"' );
 		$icon = '<svg aria-hidden="true"><use href="#' . \esc_attr( $attributes['icon'] ) . '"></use></svg>';
 		$style = ' style="height: ' . $attributes['size'] . '; width: ' . $attributes['size'] . ';"';
-		$markup = '<div %1$s%2$s>%3$s%4$s%5$s</div>';
+		$markup = '<' . $attributes['element'] . ' %1$s%2$s>%3$s%4$s%5$s</' . $attributes['element'] . '>';
 		$maybe_link_end = (
 			! empty( $attributes['url'] )
 			? '</a>'
@@ -78,11 +79,18 @@ final class Block {
 			? '<a class="link" href="' . \sanitize_url( $attributes['url'] ) . '"' . ( ! empty( $attributes['linkTarget'] ) ? ' target="' . \esc_attr( $attributes['linkTarget'] ) . '"' : '' ) . ( ! empty( $attributes['rel'] ) ? ' rel="' . \esc_attr( $attributes['rel'] ) . '"' : '' ) . $style . '>'
 			: '<span class="no-link"' . $style . '>'
 		);
-		$wrapper_attributes = \str_replace(
-			'wp-block-epi-icon',
-			'wp-block-epi-icon is-icon-' . \sanitize_html_class( $attributes['icon'] ),
-			\get_block_wrapper_attributes()
-		);
+		
+		if ( empty( $attributes['type'] ) ) {
+			$wrapper_attributes = \str_replace(
+				'wp-block-epi-icon',
+				'wp-block-epi-icon is-icon-' . \sanitize_html_class( $attributes['icon'] ),
+				\get_block_wrapper_attributes()
+			);
+		}
+		else if ( $attributes['type'] === 'shortcode' ) {
+			$wrapper_attributes = 'class="wp-block-epi-icon is-shortcode is-icon-' . \sanitize_html_class( $attributes['icon'] ) . '"';
+		}
+		
 		$markup = \sprintf(
 			$markup,
 			$wrapper_attributes,

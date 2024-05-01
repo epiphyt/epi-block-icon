@@ -25,6 +25,7 @@ final class Plugin {
 	public function init(): void {
 		\add_action( 'init', [ self::class, 'load_textdomain' ], 0 );
 		\add_action( 'wp_footer', [ $this, 'enqueue_icons' ] );
+		\add_shortcode( 'epi_icon', [ self::class, 'shortcode_callback' ] );
 		
 		Admin::init();
 		Block::init();
@@ -116,5 +117,22 @@ final class Plugin {
 		if ( ! \in_array( $icon, $this->registered_icons, true ) ) {
 			$this->registered_icons[] = $icon;
 		}
+	}
+	
+	/**
+	 * The shortcode callback.
+	 * 
+	 * @param	array|string	$attributes Shortcode attributes
+	 * @return	string Shortcode output
+	 */
+	public static function shortcode_callback( array|string $attributes ): string {
+		if ( \is_string( $attributes ) ) {
+			$attributes = (array) $attributes;
+		}
+		
+		$attributes['element'] = 'span';
+		$attributes['type'] = 'shortcode';
+		
+		return Block::render_icon( $attributes );
 	}
 }
