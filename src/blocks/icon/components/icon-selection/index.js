@@ -14,9 +14,9 @@ export default function IconSelection( { fetchedIcons, setAttributes, setFetched
 		<Dropdown
 			className={ 'epi-block-icon__selection-popover--inserter is-' + ( isModalOpen ? 'open' : 'closed' ) }
 			onToggle={ () => setIsModalOpen( ! isModalOpen ) }
-			placement="bottom"
 			popoverProps={ {
 				className: 'epi-block-icon__selection-popover',
+				placement: 'bottom',
 			} }
 			renderContent={ () => (
 				<div className={ 'epi-block-icon__selection is-' + ( isModalOpen ? 'open' : 'closed' ) }>
